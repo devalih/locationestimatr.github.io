@@ -2,11 +2,11 @@
     "my_area":{
         "type":"area"
     },
-    "world": {
+    "العالم": {
         "type": "kml",
-        "file": "world.kml"
+        "file": "العالم.kml"
     },
-    "european_union": {
+    "الاتحاد الاوروبي": {
         "type": "collection",
         "countries": [
             "Austria",
@@ -39,7 +39,7 @@
             "United Kingdom"
         ]
     },
-    "africa": {
+    "افريقيا": {
         "type": "collection",
         "countries": [
             "الجزائر",
@@ -99,7 +99,7 @@
             "Zimbabwe"
         ]
     },
-    "north_america": {
+    "امريكا الشمالية": {
         "type": "collection",
         "countries": [
             "Antigua and Barbuda",
@@ -128,7 +128,7 @@
             "Greenland"
         ]
     },
-    "south_america": {
+    "امريكا الجنوبية": {
         "type": "collection",
         "countries": [
             "Argentina",
@@ -145,7 +145,7 @@
             "Venezuela"
         ]
     },
-    "europe": {
+    "اوروبا": {
         "type": "collection",
         "countries": [
             "Albania",
@@ -201,7 +201,7 @@
             "Vatican City"
         ]
     },
-    "south_east_asia":{
+    "جنوب شرق اسيا":{
         "type":"collection",
         "countries":[
             "Singapore",
@@ -217,7 +217,7 @@
             "Cambodia"
         ]
     },
-    "asia": {
+    "اسيا": {
         "type": "collection",
         "countries": [
             "Afghanistan",
@@ -274,32 +274,16 @@
             "اليمن"
         ]
     },
-    "arab_countries": {
+    "الوطن العربي": {
         "type": "collection",
         "countries": [
-    "عُمان",
-    "اليمن",
-    "السعودية",
-    "الإمارات",
-    "قطر",
-    "البحرين",
-    "الكويت",
     "الأردن",
+    "عمان",
+    "عُمان",
+    "الإمارات",
     "لبنان",
-    "العراق",
-    "سوريا",
-    "مصر",
-    "ليبيا",
     "تونس",
-    "الجزائر",
-    "المغرب",
-    "موريتانيا",
-    "الصومال",
-    "جيبوتي",
-    "السودان",
-    "فلسطين",
-    "القدس",
-    "Comoros"
+    "القدس"
         ]
     }
 }

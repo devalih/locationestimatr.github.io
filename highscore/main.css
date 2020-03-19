@@ -95,7 +95,7 @@ body {
 }
 
 .individual-scores {
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .hidden h4 {
@@ -152,7 +152,7 @@ body {
     border-radius: 5px;
     transition: 0.15s;
     cursor: pointer;
-    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .score[active] {

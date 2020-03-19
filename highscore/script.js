@@ -36,7 +36,7 @@ async function init() {
         location.reload();
     });
     if (map === "")
-        map = "world";
+        map = "العالم";
 
     let niceMap = nicify(map);
 
