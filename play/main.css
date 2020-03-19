@@ -437,3 +437,7 @@ input[type=text], input[type=password], input[type=email], input[type=number] te
 input[type='button'], input[type='submit'], a[href] {
     cursor: pointer;
 }
+
+.note {
+    font-size: 20px;
+}
