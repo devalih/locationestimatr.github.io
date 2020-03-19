@@ -100,17 +100,17 @@ function displayScores(element, scores) {
                 <div class="score-date">${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}</div>
                 <div class="hidden">
                     ${score.hasOwnProperty('time') ? `<p class="score-date">Time taken: ${msToTime(score.time)}<p>` : ''}
-                    <h4>Round scores</h4>
+                    <h4>نتائج الجولات</h4>
                     <ol class="individual-scores">
                         ${score.individualScores.map(s => `<li>${s}</li>`).join("")}
                     </ol>
                     <div class="rules">
-                        <h4>Game rules</h4>
-                        <p>Rounds: ${score.rules.roundCount}</p>
-                        <p>Time limit: ${score.rules.timeLimit === -1 ? "∞" : score.rules.timeLimit}<p>
-                        <p>Move limit: ${score.rules.moveLimit === -1 ? "∞" : score.rules.moveLimit}<p>
-                        <p>Zoom: ${score.rules.zoomAllowed ? "allowed" : "restricted"}<p>
-                        <p>Panning: ${score.rules.panAllowed ? "allowed" : "restricted"}<p>
+                        <h4>قوانين اللعبة</h4>
+                        <p>الجولات: ${score.rules.roundCount}</p>
+                        <p>حد الوقت: ${score.rules.timeLimit === -1 ? "∞" : score.rules.timeLimit}<p>
+                        <p>حد الحركة: ${score.rules.moveLimit === -1 ? "∞" : score.rules.moveLimit}<p>
+                        <p hidden>Zoom: ${score.rules.zoomAllowed ? "allowed" : "restricted"}<p>
+                        <p hidden>Panning: ${score.rules.panAllowed ? "allowed" : "restricted"}<p>
                     </div>
                 </div>
             </li>

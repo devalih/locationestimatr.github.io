@@ -16,9 +16,9 @@ class StreetviewElement {
         if (moves === 0)
             this.restrictMove();
         remainingElement.style.display = "inline-block";
-        remainingElement.innerHTML = `Moves: <b>${moves}</b>`;
+        remainingElement.innerHTML = `الحركات: <b>${moves}</b>`;
         this.panorama.addListener("position_changed", () => {
-            remainingElement.innerHTML = `Moves: <b>${--moves}</b>`;
+            remainingElement.innerHTML = `الحركات: <b>${--moves}</b>`;
             if (moves === 0)
                 this.restrictMove();
         });

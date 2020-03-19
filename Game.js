@@ -110,7 +110,7 @@ class Game {
     }
 
     applyRules() {
-        this.roundElement.innerHTML = `Round: <b>${this.currentRound}/${this.rules.roundCount}</b>`;
+        this.roundElement.innerHTML = `الجولة: <b>${this.currentRound}/${this.rules.roundCount}</b>`;
 
         if (!this.rules.panAllowed)
             this.svElement.restrictPan();
@@ -130,10 +130,10 @@ class Game {
             return;
         this.timeElement.style.display = "inline-block";
         this.timerRunning = true;
-        this.timeElement.innerHTML = `Time: <b>${seconds}</b>`;
+        this.timeElement.innerHTML = `الوقت: <b>${seconds}</b>`;
         this.timeInterval = setInterval(() => {
             seconds -= 0.1;
-            this.timeElement.innerHTML = `Time: <b>${seconds < 10 ? (Math.round(seconds * 10) / 10).toFixed(1) : Math.round(seconds)}</b>`;
+            this.timeElement.innerHTML = `الوقت: <b>${seconds < 10 ? (Math.round(seconds * 10) / 10).toFixed(1) : Math.round(seconds)}</b>`;
         }, 100);
         this.timeTimeout = setTimeout(() => {
             this.makeGuess({lat: 0, lng: 0});
@@ -245,7 +245,7 @@ class Game {
 
         let totalScore = this.previousGuesses.map(result => result.score).reduce((a, b) => a + b);
 
-        this.scoreElement.innerHTML = `Score: <b>${totalScore}</b>`;
+        this.scoreElement.innerHTML = `النتيجة: <b>${totalScore}</b>`;
 
         return [score, niceDistance, totalScore];
     }
@@ -358,7 +358,7 @@ class Game {
         if (++this.currentRound < this.rules.roundCount)
             this.preloadNextMap();
 
-        this.roundElement.innerHTML = `Round: <b>${this.currentRound}/${this.rules.roundCount}</b>`;
+        this.roundElement.innerHTML = `الجولة: <b>${this.currentRound}/${this.rules.roundCount}</b>`;
 
 
         setTimeout(() => {

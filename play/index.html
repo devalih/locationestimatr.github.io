@@ -1,4 +1,4 @@
-<html lang='nl'>
+<html dir="rtl" lang="ar">
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -15,7 +15,7 @@
         gtag('config', 'UA-35913371-9');
     </script>
     <meta charset='utf-8'/>
-    <title>Location Estimatr</title>
+    <title>تحدي الأماكن</title>
     <meta name='theme-color' content='#6e45e2'>
     <meta name='mobile-web-app-capable' content='yes'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,10 +38,10 @@
 <body>
 <div class='estimator'>
     <div class="gamerule-selector">
-        <h2>Rules</h2>
+        <h2>القوانين</h2>
         <form>
             <div class="radio-picker">
-                <p>Round count</p>
+                <p>عدد الجولات</p>
                 <input type="radio" name="round-count" value="1" id="1round">
                 <label class="radio-choice" for="1round">1</label>
                 <input type="radio" name="round-count" value="2" id="2round">
@@ -54,25 +54,25 @@
                 <label class="radio-choice" for="5round">5</label>
             </div>
             <label class="number-picker">
-                <p>Time limit</p>
-                <p class="hint">-1 = infinite</p>
+                <p>حد الوقت للجولة الواحدة</p>
+                <p class="hint">-1 = غير محدود</p>
                 <input type="number" name='time-limit' class='button' value="-1">
-                <span>Seconds</span>
+                <span>ثواني</span>
             </label>
             <label class="number-picker">
-                <p>Move limit</p>
-                <p class="hint">-1 = infinite</p>
+                <p>حد الحركة خلال الجولة الواحدة</p>
+                <p class="hint">-1 = غير محدود</p>
                 <input type="number" name='move-limit' class='button' value="-1">
-                <span>Moves</span>
+                <span>حركات</span>
             </label>
-            <div class="radio-picker pan-radio">
+            <div class="radio-picker pan-radio" hidden>
                 <p>Zooming and panning</p>
                 <input type="checkbox" name="allowed" value="pan" id="yes" checked>
                 <label class="radio-choice" for="yes">Pan</label>
                 <input type="checkbox" name="allowed" value="zoom" id="no" checked>
                 <label class="radio-choice" for="no">Zoom</label>
             </div>
-            <input type="submit" class="button" value="Start Game" onclick="game.setRules(event)">
+            <input type="submit" class="button" value="ابدأ الآن" onclick="game.setRules(event)">
         </form>
     </div>
     <div class="map-element"></div>
@@ -93,23 +93,23 @@
                     <input pattern=".{3,}" class="username-input" placeholder="Username" required title="3 characters minimum">
                     <input type="submit" value="Submit" class="button submit-button">
                 </form>
-                <div class="button play-again-button" onclick="game.playAgain();">العب< Again</div>
-                <div class="button home-button" onclick="goHome()">Choose Another Map</div>
+                <div class="button play-again-button" onclick="game.playAgain();">العب مجدداً</div>
+                <div class="button home-button" onclick="goHome()">اختار خريطة اخرى</div>
             </div>
         </div>
     </div>
     <div class="info-view">
-        <div class="round">Round: <b>2/5</b></div>
-        <div class="total-score">Score: <b>0</b></div>
-        <div class="time-left">Time: <b>0</b></div>
-        <div class="moves-left">Moves: <b>0</b></div>
+        <div class="round">الجولة: <b>2/5</b></div>
+        <div class="total-score">النتيجة: <b>0</b></div>
+        <div class="time-left">الوقت: <b>0</b></div>
+        <div class="moves-left">الحركات: <b>0</b></div>
     </div>
     <div class="return-home" onclick="game.returnHome()"></div>
     <div class="guess-map">
         <div class="toggle-map-overlay" onclick="game.toggleMapOverlay()"></div>
         <div class="guess-map-resizer"></div>
         <div class="embed-map"></div>
-        <div class="guess-button" onclick="game.makeGuess()">Make Guess</div>
+        <div class="guess-button" onclick="game.makeGuess()">احزر الموقع</div>
     </div>
     <div class="streetview"></div>
 </div>
