@@ -438,6 +438,6 @@ input[type='button'], input[type='submit'], a[href] {
     cursor: pointer;
 }
 
-.note {
-    font-size: 20px;
+.note p {
+    font-size: 12px;
 }
