@@ -39,14 +39,6 @@
             "United Kingdom"
         ]
     },
-    "benelux": {
-        "type": "collection",
-        "countries": [
-            "Netherlands",
-            "Belgium",
-            "Luxembourg"
-        ]
-    },
     "africa": {
         "type": "collection",
         "countries": [
@@ -280,23 +272,31 @@
             "Yemen"
         ]
     },
-    "oceania": {
+    "arab_countries": {
         "type": "collection",
         "countries": [
-            "Australia",
-            "Fiji",
-            "Kiribati",
-            "Marshall Islands",
-            "Micronesia",
-            "Nauru",
-            "New Zealand",
-            "Palau",
-            "Papua New Guinea",
-            "Samoa",
-            "Solomon Islands",
-            "Tonga",
-            "Tuvalu",
-            "Vanuatu"
+    "Oman",
+    "Yemen",
+    "Saudi Arabia",
+    "United Arab Emirates",
+    "Qatar",
+    "Bahrain",
+    "Kuwait",
+    "Jordan",
+    "Lebanon",
+    "Iraq",
+    "Syria",
+    "Egypt",
+    "Libya",
+    "Tunisia",
+    "Algeria",
+    "Morocco",
+    "Mauritania",
+    "Somalia",
+    "Djibouti",
+    "Sudan",
+    "Palestine, State of",
+    "Comoros"
         ]
     }
 }
