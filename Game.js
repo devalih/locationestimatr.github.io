@@ -220,13 +220,13 @@ class Game {
 
     playAgain() {
         let button = this.element.querySelector(".play-again-button");
-        button.innerText = "Loading...";
+        button.innerText = "تحميل...";
         this.newGame();
         this.once("nextRound", () => {
             let overviewElement = this.element.querySelector(".guess-overview");
             overviewElement.style.transform = "translateY(-100%)";
             setTimeout(() => {
-                button.innerText = "Play Again";
+                button.innerText = "العب مرة اخرى";
                 this.applyRules();
             }, 300);
         });
@@ -259,11 +259,12 @@ class Game {
         overviewElement.querySelector(".game-end-buttons").style.display = "none";
 
         let [meterElement, scoreElement] = overviewElement.querySelectorAll(".score-text p");
-        meterElement.innerText = `Your guess is ${niceDistance} removed from your start location`;
+        meterElement.innerText = `اختيارك كان بعيدا مسافة ${niceDistance} عن النقطة المطلوبة`;
+
         if (score === 1)
-            scoreElement.innerText = `You scored a point`;
+            scoreElement.innerText = `لقد احرزت نقطة واحدة`;
         else
-            scoreElement.innerText = `You scored ${score} points`;
+            scoreElement.innerText = `لقد احرزت  ${score} نقطة`;
 
         this.fitMap([guess, actual]);
         setTimeout(() => {
@@ -283,11 +284,11 @@ class Game {
         let maxScore = this.map.maxScore * this.rules.roundCount;
 
         let [meterElement, scoreElement] = overviewElement.querySelectorAll(".score-text p");
-        meterElement.innerText = `Your latest guess is ${niceDistance} removed from your start location`;
+        meterElement.innerText = `اختيارك الاخير كان بعيداً مسافة  ${niceDistance}  عن النقطة المطلوبة `;
         if (score === 1)
-            scoreElement.innerText = `You scored a point, which brings your total score to ${totalScore} points`;
+            scoreElement.innerText = `لقد احرزت نقطة واحدة, ما يجعل نتيجة الحالية ${totalScore}  نقطة `;
         else
-            scoreElement.innerText = `You scored ${score} points, which brings your total score to ${totalScore} points`;
+            scoreElement.innerText = `لقد احرزت  ${score} نقطة , ما يجعل نتيجة الحالية ${totalScore} نقطة `;
 
         let locations = this.previousGuesses.map(result => result.guess).concat(this.previousGuesses.map(result => result.actual));
         this.fitMap(locations);
@@ -325,14 +326,14 @@ class Game {
 
     nextRoundButton() {
         let button = this.element.querySelector(".next-round-button");
-        button.innerText = "Loading...";
+        button.innerText = "تحميل...";
 
         this.once("nextRound", () => {
             let overviewElement = this.element.querySelector(".guess-overview");
             overviewElement.style.transform = "translateY(-100%)";
 
             setTimeout(() => {
-                button.innerText = "Next Round";
+                button.innerText = "الجولة التالية";
                 if (this.svElement.panorama) {
                     this.svElement.panorama.setZoom(0);
                     this.applyRules();
@@ -408,7 +409,7 @@ class Game {
             position: guess,
             map: this.googleMap,
             animation: google.maps.Animation.DROP,
-            title: "Your guess",
+            title: "اختيارك",
         });
 
         setTimeout(() => {

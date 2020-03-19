@@ -83,15 +83,15 @@
                 <div class="score-progress"></div>
             </div>
             <div class="score-text">
-                <p>Your guess is 0 cm removed from your start location</p>
-                <p>You scored ∞ points</p>
+                <p>اختيارك كان بعيدا مسافة ٠ سم عن النقطة المطلوبة</p>
+                <p>لقد احرزت ∞ نقطة</p>
             </div>
-            <div class="button next-round-button" onclick="game.nextRoundButton()">Next Round</div>
+            <div class="button next-round-button" onclick="game.nextRoundButton()">الجولة التالية</div>
             <div class="game-end-buttons">
                 <form class="high-score-form" onsubmit="game.uploadScore(event)">
-                    <p>Submit to scoreboard to see other high scores</p>
-                    <input pattern=".{3,}" class="username-input" placeholder="Username" required title="3 characters minimum">
-                    <input type="submit" value="Submit" class="button submit-button">
+                    <p>ارسل الى قائمة المتصدين لترى نتيجتك بينهم</p>
+                    <input pattern=".{3,}" class="username-input" placeholder="الاسم" required title="3 characters minimum">
+                    <input type="submit" value="أرسل" class="button submit-button">
                 </form>
                 <div class="button play-again-button" onclick="game.playAgain();">العب مجدداً</div>
                 <div class="button home-button" onclick="goHome()">اختار خريطة اخرى</div>
