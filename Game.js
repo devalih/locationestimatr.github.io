@@ -166,6 +166,7 @@ class Game {
             this.map.polygon.setMap(this.googleMap);
     }
 
+
     setResizeEventListeners() {
         let resizeElement = this.element.querySelector(".guess-map-resizer");
         let resizerDown = false;
@@ -341,6 +342,7 @@ class Game {
             }, 300);
         })
         this.nextRound();
+        this.makeSmall();
     }
 
     nextRound() {
@@ -537,5 +539,18 @@ class Game {
         } else {
             console.warn(`Trying to remove ${event} event, but it does not exist`);
         }
+    }
+
+    makeSmall() {
+        let guessMap = this.element.querySelector(".guess-map");
+        guessMap.style.height = "200px";
+        guessMap.style.width = "200px";
+
+    }
+
+    makeBig() {
+        let guessMap = this.element.querySelector(".guess-map");
+        guessMap.style.height = "100%";
+        guessMap.style.width = "100%";
     }
 }
